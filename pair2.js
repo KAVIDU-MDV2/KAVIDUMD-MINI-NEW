@@ -40,7 +40,7 @@ const config = {
   RCD_IMAGE_PATH: 'https://i.ibb.co/KxrG6Fpm/IMG-20251011-WA0084.jpg',
   NEWSLETTER_JID: '120363421928318889@newsletter',
   OTP_EXPIRY: 300000,
-  OWNER_NUMBER: process.env.OWNER_NUMBER || '94702529242',
+  OWNER_NUMBER: process.env.OWNER_NUMBER || '94767054052',
   CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAtADv0LKZFPYOW4M2f',
   BOT_NAME: '𝗡𝗔𝗥𝗨𝗧𝗢 𝗠𝗗',
   BOT_VERSION: '2.0.0V',
@@ -5106,4 +5106,5 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
